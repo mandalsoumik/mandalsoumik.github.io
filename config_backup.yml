@@ -1,0 +1,106 @@
+baseURL: "https://mandalsoumik.github.io/"
+title: Soumik Mandal
+theme: PaperMod
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 20
+
+taxonomies:
+    tag: tags
+
+menu:
+    main:
+        - name: Papers
+          url: papers/
+          weight: 1
+        - name: Teaching
+          url: courses/
+          weight: 2
+        - name: Data
+          url: data/
+          weight: 3
+
+params:
+    description: "Personal website of Soumik Mandal - Digital Health Researcher"
+    author: Soumik Mandal
+    DateFormat: "January 2006"
+    defaultTheme: light
+    hideFooter: false
+    disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: false
+    disableSpecial1stPost: true
+    disableAnchoredHeadings: true
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: false
+    ShowCodeCopyButtons: true
+    ShowAllPagesInArchive: false
+    MainSections: ["papers","courses","data"]
+    ShowToc: false
+    disableScrollToTop: true
+    TocOpen: true
+    ShowWordCount: false
+    UseHugoToc: true
+    comments: false
+    math: true
+    
+    profileMode:
+        enabled: true
+        title: Soumik Mandal
+        subtitle: |
+            I am a Research Scientist in Population Health at the NYU Grossman School of Medicine, working at the intersection of <strong>digital health</strong>, <strong>human–AI interaction</strong>, and <strong>engagement phenotyping</strong>. My research examines how AI-enabled and data-driven technologies are reshaping care delivery, patient–provider communication, and clinicians' well-being alongside the broader social dynamics of healthcare shaped by <strong>workload</strong>, <strong>trust</strong>, <strong>commitment</strong>, and <strong>health equity</strong>.<br><br>
+            
+            My recent projects focus on:
+            <ul style="margin-top: 10px; margin-bottom: 0; margin-left: 30px;">
+              <li><strong>User engagement with digital interventions for chronic disease management:</strong> investigating what engagement means for patients, causal effects on engagement on health outcomes, and how behavioral phenotyping can enable adaptive, personalized, and equitable intervention design.</li>
+              <li><strong>Impacts of Generative AI supported care delivery on patient advice seeking:</strong> evaluating how AI-mediated messaging and remote triage influence clinical workload and patients' perceptions of care quality, clinician competence, and trust.</li>
+            </ul><br>
+            My work is supported by the NIH and the AHRQ.
+
+
+        imageUrl: "picture1.jpeg"
+        imageWidth: 160
+        imageHeight: 160
+        buttons:
+            - name: Papers
+              url: papers/
+            - name: Teaching
+              url: courses/
+            - name: Data
+              url: data/
+            - name: CV
+              url: cv.pdf
+              
+    socialIcons:
+        - name: Email
+          url: mailto:soumik.mandal@nyulangone.org
+        - name: Google Scholar
+          url: https://scholar.google.com/citations?user=lnGiUk8AAAAJ&hl=en&oi=ao
+        - name: LinkedIn
+          url: https://www.linkedin.com/in/soumik-mandal/
+          
+    assets:
+        disableScrollBarStyle: true
+        
+    cover:
+        hiddenInList: false
+        hiddenInSingle: true
+        
+    label:
+        text: "Soumik Mandal"
+        icon: favicon.ico
+        iconHeight: 18
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        guessSyntax: true
+        style: autumn 
+    tableOfContents:
+        endLevel: 2
+        ordered: false
+        startLevel: 2

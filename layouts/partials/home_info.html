@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">{{- with site.Params.profileMode }}</p>
+<p class="p1">&lt;article class="first-entry home-info" style="max-width: 1200px; margin: 0 auto;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display: grid; grid-template-columns: 280px 1fr; gap: 60px; align-items: start;"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Left Column: Photo and Name --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="position: sticky; top: 100px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{{- if .imageUrl }}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img draggable="false" src="{{ .imageUrl }}" alt="{{ .imageTitle | default " profile image" }}"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>style="width: 100%; border-radius: 8px; margin-bottom: 20px;" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{{- end }}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 style="font-size: 28px; margin: 0 0 8px 0; font-weight: 600;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{{ .title | default site.Title }}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>{{- if .subtitle }}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="margin-top: 20px; font-size: 14px; color: var(--secondary);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{{- with site.Params.socialIcons }}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="social-icons" style="display: flex; flex-direction: column; gap: 12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{{- range . }}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{{- if .name }}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="{{ .url }}" target="_blank" rel="noopener noreferrer me"</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>title="{{ .name }}" style="display: flex; align-items: center; gap: 10px; color: var(--primary); text-decoration: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="svg-icon" style="width: 20px; height: 20px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>{{- partial "svg.html" . }}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;{{ .name }}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{{- end }}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{{- end }}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{{- end }}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{{- end }}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Right Column: About Me Content --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 style="font-size: 24px; margin: 0 0 24px 0; font-weight: 600; border-bottom: 2px solid var(--border); padding-bottom: 12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>About Me</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>{{- if .subtitle }}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="entry-content" style="font-size: 16px; line-height: 1.7;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{{ .subtitle | markdownify }}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{{- end }}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>{{- if .buttons }}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="buttons" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{{- range .buttons }}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a class="button" href="{{ .url }}" rel="noopener" title="{{ .name }}"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>style="padding: 10px 20px; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--primary); font-weight: 500; transition: all 0.2s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{{ .name }}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12" style="margin-left: 4px; display: inline-block; vertical-align: middle;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;path d="M5 12h14M12 5l7 7-7 7"&gt;&lt;/path&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{{- end }}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{{- end }}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: var(--entry);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-color: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>article.home-info &gt; div {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: 1fr !important;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 30px !important;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>article.home-info &gt; div &gt; div:first-child {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: static !important;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">{{- end }}</p>
+</body>
+</html>
