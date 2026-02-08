@@ -47,20 +47,20 @@ params:
     math: true
     
     profileMode:
-      enabled: true
-      title: Soumik Mandal
-      subtitle: |
-        I am a Research Scientist in Population Health at the NYU Grossman School of Medicine, working at the intersection of <strong>digital health</strong>, <strong>Human–AI interaction</strong>, and <strong>engagement phenotyping</strong>. My research examines how AI-enabled and data-driven technologies are reshaping care delivery, patient–provider communication, and clinicians' well-being alongside the broader social dynamics of healthcare shaped by <strong>trust</strong>, <strong>expectation</strong>, <strong>workload</strong>, and <strong>health equity</strong>.<br><br>
-        
-        My recent projects focus on:
-        <ul style="margin-top: 10px; margin-bottom: 0;">
-          <li><strong>User engagement with digital interventions for chronic disease management:</strong> investigating what engagement means for patients, how causally it affects health outcomes, and how behavioral phenotyping can enable adaptive, personalized, and equitable intervention design.</li>
-          <li><strong>Impacts of Generative AI supported care delivery on patient advice seeking:</strong> evaluating how AI-mediated messaging and remote triage influence clinical workload and patients' perceptions of care quality, clinician competence, and trust.</li>
-        </ul>
-      imageUrl: "picture.jpg"
-      imageWidth: 160
-      imageHeight: 160
-          buttons:
+        enabled: true
+        title: Soumik Mandal
+        subtitle: |
+            I am a Research Scientist in Population Health at the NYU Grossman School of Medicine, working at the intersection of <strong>digital health</strong>, <strong>Human–AI interaction</strong>, and <strong>engagement phenotyping</strong>. My research examines how AI-enabled and data-driven technologies are reshaping care delivery, patient–provider communication, and clinicians' well-being alongside the broader social dynamics of healthcare shaped by <strong>trust</strong>, <strong>expectation</strong>, <strong>workload</strong>, and <strong>health equity</strong>.<br><br>
+            
+            My recent projects focus on:
+            <ul style="margin-top: 10px; margin-bottom: 0;">
+              <li><strong>User engagement with digital interventions for chronic disease management:</strong> investigating what engagement means for patients, how causally it affects health outcomes, and how behavioral phenotyping can enable adaptive, personalized, and equitable intervention design.</li>
+              <li><strong>Impacts of Generative AI supported care delivery on patient advice seeking:</strong> evaluating how AI-mediated messaging and remote triage influence clinical workload and patients' perceptions of care quality, clinician competence, and trust.</li>
+            </ul>
+        imageUrl: "picture.jpg"
+        imageWidth: 160
+        imageHeight: 160
+        buttons:
             - name: Papers
               url: papers/
             - name: Teaching
@@ -86,9 +86,9 @@ params:
         hiddenInSingle: true
         
     label:
-      text: "Soumik Mandal"
-      icon: favicon.ico
-      iconHeight: 18
+        text: "Soumik Mandal"
+        icon: favicon.ico
+        iconHeight: 18
 
 markup:
     goldmark:
