@@ -7,41 +7,42 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2685.3">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
   </style>
 </head>
 <body>
-<p class="p1">{{- define "main" }}</p>
-<p class="p2"><br></p>
-<p class="p1">{{- if .Site.Params.profileMode.enabled }}</p>
-<p class="p1">{{- partial "home_info.html" . }}</p>
-<p class="p1">{{- end }}</p>
-<p class="p2"><br></p>
-<p class="p1">{{- if .Site.Params.homeInfoParams }}</p>
-<p class="p1">{{- partial "home_info.html" . }}</p>
-<p class="p1">{{- end }}</p>
-<p class="p2"><br></p>
-<p class="p1">{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}</p>
-<p class="p2"><br></p>
-<p class="p1">{{- if (and site.Params.profileMode.enabled $pages) }}</p>
-<p class="p1">&lt;div class="post-list"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}</p>
-<p class="p1">{{- $pages = where $pages "Params.hiddenInHomeList" "!=" true<span class="Apple-converted-space">  </span>}}</p>
-<p class="p1">{{- if site.Params.ShowAllPagesInArchive }}</p>
-<p class="p1">{{- range $pages }}</p>
-<p class="p1">{{- .Render "list" }}</p>
-<p class="p1">{{- end }}</p>
-<p class="p1">{{- else }}</p>
-<p class="p1">{{- range first site.Params.homeInfoParams.Limit $pages }}</p>
-<p class="p1">{{- .Render "list" }}</p>
-<p class="p1">{{- end }}</p>
-<p class="p1">{{- end }}</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">{{- end }}</p>
-<p class="p2"><br></p>
-<p class="p1">{{- end }}</p>
+<p class="p1"><span class="s1">{{- define "main" }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- if .Site.Params.profileMode.enabled }}</span></p>
+<p class="p1"><span class="s1">{{- partial "home_info.html" . }}</span></p>
+<p class="p1"><span class="s1">{{- end }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- if .Site.Params.homeInfoParams }}</span></p>
+<p class="p1"><span class="s1">{{- partial "home_info.html" . }}</span></p>
+<p class="p1"><span class="s1">{{- end }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- if (and site.Params.profileMode.enabled $pages) }}</span></p>
+<p class="p1"><span class="s1">&lt;div class="post-list"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}</span></p>
+<p class="p1"><span class="s1">{{- $pages = where $pages "Params.hiddenInHomeList" "!=" true<span class="Apple-converted-space">  </span>}}</span></p>
+<p class="p1"><span class="s1">{{- if site.Params.ShowAllPagesInArchive }}</span></p>
+<p class="p1"><span class="s1">{{- range $pages }}</span></p>
+<p class="p1"><span class="s1">{{- .Render "list" }}</span></p>
+<p class="p1"><span class="s1">{{- end }}</span></p>
+<p class="p1"><span class="s1">{{- else }}</span></p>
+<p class="p1"><span class="s1">{{- range first site.Params.homeInfoParams.Limit $pages }}</span></p>
+<p class="p1"><span class="s1">{{- .Render "list" }}</span></p>
+<p class="p1"><span class="s1">{{- end }}</span></p>
+<p class="p1"><span class="s1">{{- end }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">{{- end }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{{- end }}</span></p>
 </body>
 </html>
