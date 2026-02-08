@@ -1,101 +1,98 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">{{- with site.Params.profileMode }}</span></p>
-<p class="p1"><span class="s1">&lt;article class="first-entry home-info"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div style="display: grid; grid-template-columns: 250px 1fr; gap: 80px; max-width: 1100px; margin: 0 auto; padding: 40px 20px;"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Left Column: Photo and Name --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div style="text-align: center;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{- if .imageUrl }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;img draggable="false" src="{{ .imageUrl }}" alt="profile image"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>style="width: 100%; max-width: 200px; border-radius: 50%; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" /&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{- end }}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1 style="font-size: 26px; margin: 0 0 8px 0; font-weight: 600;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{ .title | default site.Title }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p style="font-size: 15px; color: var(--secondary); margin-bottom: 24px;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Research Scientist</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{- with site.Params.socialIcons }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="social-icons" style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start; margin-top: 30px;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- range . }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- if .name }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="{{ .url }}" target="_blank" rel="noopener noreferrer me"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>title="{{ .name }}" style="display: flex; align-items: center; gap: 12px; color: var(--primary); text-decoration: none; font-size: 14px; width: 100%;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span style="width: 18px; height: 18px; flex-shrink: 0; display: inline-flex; align-items: center;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- partial "svg.html" . }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span&gt;{{ .name }}&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- end }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- end }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{- end }}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{- if .buttons }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="buttons" style="display: flex; flex-direction: column; gap: 10px; margin-top: 30px;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- range .buttons }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a class="button" href="{{ .url }}" rel="noopener" title="{{ .name }}"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>style="padding: 10px 20px; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--primary); font-weight: 500; transition: all 0.2s; display: block; text-align: center; font-size: 14px;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{{ .name }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- end }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{- end }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Right Column: About Me Content --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 style="font-size: 28px; margin: 0 0 30px 0; font-weight: 600;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>About Me</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{- if .subtitle }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="entry-content" style="font-size: 16px; line-height: 1.8; color: var(--content);"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{ .subtitle | markdownify }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{- end }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/article&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.button:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>background-color: var(--theme);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-color: var(--primary);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.social-icons a:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>color: var(--tertiary);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 768px) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>article.home-info &gt; div {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>grid-template-columns: 1fr !important;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 40px !important;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>article.home-info img {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 150px !important;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">{{- end }}</span></p>
-</body>
-</html>
+{{- with site.Params.profileMode }}
+<article class="first-entry home-info">
+    <div style="display: grid; grid-template-columns: 250px 1fr; gap: 80px; max-width: 1100px; margin: 0 auto; padding: 40px 20px;">
+        
+        <!-- Left Column: Photo and Name -->
+        <div style="text-align: center;">
+            {{- if .imageUrl }}
+            <img draggable="false" src="{{ .imageUrl }}" alt="profile image"
+                style="width: 100%; max-width: 200px; border-radius: 50%; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" />
+            {{- end }}
+            
+            <h1 style="font-size: 26px; margin: 0 0 8px 0; font-weight: 600;">
+                {{ .title | default site.Title }}
+            </h1>
+            
+            <p style="font-size: 15px; color: var(--secondary); margin-bottom: 24px;">
+                Research Scientist
+            </p>
+            
+            {{- with site.Params.socialIcons }}
+            <div class="social-icons" style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start; margin-top: 30px;">
+                {{- range . }}
+                {{- $icon_name := ( trim .name " " | lower ) }}
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer me"
+                    title="{{ .name }}" style="display: flex; align-items: center; gap: 12px; color: var(--primary); text-decoration: none; font-size: 14px; width: 100%;">
+                    <span style="width: 18px; height: 18px; flex-shrink: 0;">
+                        {{- if (eq $icon_name "email") }}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        {{- else if (eq $icon_name "google scholar") }}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                            <path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/>
+                        </svg>
+                        {{- else if (eq $icon_name "linkedin") }}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        {{- end }}
+                    </span>
+                    <span>{{ .name }}</span>
+                </a>
+                {{- end }}
+            </div>
+            {{- end }}
+            
+            {{- if .buttons }}
+            <div class="buttons" style="display: flex; flex-direction: column; gap: 10px; margin-top: 30px;">
+                {{- range .buttons }}
+                <a class="button" href="{{ .url }}" rel="noopener" title="{{ .name }}"
+                    style="padding: 10px 20px; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--primary); font-weight: 500; transition: all 0.2s; display: block; text-align: center; font-size: 14px;">
+                    {{ .name }}
+                </a>
+                {{- end }}
+            </div>
+            {{- end }}
+        </div>
+
+        <!-- Right Column: About Me Content -->
+        <div>
+            <h2 style="font-size: 28px; margin: 0 0 30px 0; font-weight: 600;">
+                About Me
+            </h2>
+            
+            {{- if .subtitle }}
+            <div class="entry-content" style="font-size: 16px; line-height: 1.8; color: var(--content);">
+                {{ .subtitle | markdownify }}
+            </div>
+            {{- end }}
+        </div>
+    </div>
+</article>
+
+<style>
+    .button:hover {
+        background-color: var(--theme);
+        border-color: var(--primary);
+    }
+    
+    .social-icons a:hover {
+        color: var(--tertiary);
+    }
+    
+    @media (max-width: 768px) {
+        article.home-info > div {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+        }
+        
+        article.home-info img {
+            max-width: 150px !important;
+        }
+    }
+</style>
+{{- end }}
