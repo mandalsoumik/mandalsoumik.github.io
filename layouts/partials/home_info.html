@@ -1,12 +1,12 @@
 {{- with site.Params.profileMode }}
-<article class="first-entry home-info">
-    <div style="display: grid; grid-template-columns: 280px 1fr; gap: 60px; max-width: 95%; margin: 0 auto; padding: 40px 0;">
+<article class="first-entry home-info" style="max-width: none !important;">
+    <div style="display: grid; grid-template-columns: 300px 1fr; gap: 80px; max-width: none; width: 90vw; margin: 0 auto; padding: 40px 0;">
         
         <!-- Left Column: Photo and Name -->
         <div style="text-align: center;">
             {{- if .imageUrl }}
             <img draggable="false" src="{{ .imageUrl }}" alt="profile image"
-                style="width: 100%; max-width: 220px; border-radius: 50%; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" />
+                style="width: 100%; max-width: 240px; border-radius: 50%; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" />
             {{- end }}
             
             <h1 style="font-size: 26px; margin: 0 0 8px 0; font-weight: 600;">
@@ -55,16 +55,16 @@
             </h2>
             
             {{- if .subtitle }}
-            <div class="entry-content" style="font-size: 16px; line-height: 1.8; color: var(--content); margin-bottom: 32px;">
+            <div class="entry-content" style="font-size: 17px; line-height: 1.7; color: var(--content); margin-bottom: 32px;">
                 {{ .subtitle | markdownify }}
             </div>
             {{- end }}
             
             {{- if .buttons }}
-            <div class="buttons" style="display: flex; flex-direction: row; gap: 12px; flex-wrap: wrap;">
+            <div class="buttons" style="display: flex; flex-direction: row; gap: 14px; flex-wrap: wrap;">
                 {{- range .buttons }}
                 <a class="button" href="{{ .url }}" rel="noopener" title="{{ .name }}"
-                    style="padding: 10px 24px; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--primary); font-weight: 500; transition: all 0.2s; text-align: center; font-size: 14px;">
+                    style="padding: 11px 28px; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--primary); font-weight: 500; transition: all 0.2s; text-align: center; font-size: 15px;">
                     {{ .name }}
                 </a>
                 {{- end }}
@@ -75,6 +75,11 @@
 </article>
 
 <style>
+    .main {
+        max-width: none !important;
+        width: 100% !important;
+    }
+    
     .button:hover {
         background-color: var(--theme);
         border-color: var(--primary);
@@ -88,7 +93,8 @@
         article.home-info > div {
             grid-template-columns: 1fr !important;
             gap: 40px !important;
-            padding: 40px 20px !important;
+            width: 95vw !important;
+            padding: 40px 0 !important;
         }
         
         article.home-info img {
