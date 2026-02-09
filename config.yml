@@ -103,7 +103,8 @@ markup:
   tableOfContents:
     endLevel: 2
     ordered: false
-    startLevel: 2baseURL: "https://mandalsoumik.github.io/"
+    startLevel: 2
+baseURL: "https://mandalsoumik.github.io/"
 title: Soumik Mandal
 theme: PaperMod
 enableInlineShortcodes: true
