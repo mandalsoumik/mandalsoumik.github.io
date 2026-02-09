@@ -1,6 +1,6 @@
 {{- with site.Params.profileMode }}
 <article class="first-entry home-info" style="max-width: none !important;">
-    <div style="display: grid; grid-template-columns: 300px 1fr; gap: 80px; max-width: none; width: 90vw; margin: 0 auto; padding: 40px 0;">
+    <div style="display: grid; grid-template-columns: 300px 1fr; gap: 80px; max-width: 1600px; width: 85%; margin: 0 auto; padding: 40px 0;">
         
         <!-- Left Column: Photo and Name -->
         <div style="text-align: center;">
@@ -18,20 +18,24 @@
             </p>
             
             {{- with site.Params.socialIcons }}
-            <div class="social-icons" style="display: flex; flex-direction: row; gap: 20px; justify-content: center; margin-top: 24px;">
+            <div class="social-icons" style="display: flex; flex-direction: row; gap: 24px; justify-content: center; margin-top: 24px;">
                 {{- range . }}
                 {{- $icon_name := ( trim .name " " | lower ) }}
                 <a href="{{ .url }}" target="_blank" rel="noopener noreferrer me"
-                    title="{{ .name }}" style="color: var(--primary); text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 12px;">
-                    <span style="width: 24px; height: 24px;">
+                    title="{{ .name }}" style="color: var(--primary); text-decoration: none;">
+                    <span style="width: 26px; height: 26px; display: block;">
                         {{- if (eq $icon_name "email") }}
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
                         {{- else if (eq $icon_name "google scholar") }}
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-                            <path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"></path>
+                            <path d="M12 10v4"></path>
+                            <path d="M12 16h.01"></path>
+                            <path d="M5.5 7.5 12 4l6.5 3.5"></path>
+                            <path d="M12 4v6"></path>
                         </svg>
                         {{- else if (eq $icon_name "linkedin") }}
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -41,7 +45,6 @@
                         </svg>
                         {{- end }}
                     </span>
-                    <span style="font-size: 11px;">{{ .name }}</span>
                 </a>
                 {{- end }}
             </div>
@@ -93,7 +96,7 @@
         article.home-info > div {
             grid-template-columns: 1fr !important;
             gap: 40px !important;
-            width: 95vw !important;
+            width: 90% !important;
             padding: 40px 0 !important;
         }
         
