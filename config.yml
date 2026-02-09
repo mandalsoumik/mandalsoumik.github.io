@@ -56,10 +56,10 @@ params:
     enabled: true
     title: Soumik Mandal
     subtitle: |
-      I am a Research Scientist in Population Health at the NYU Grossman School of Medicine, working at the intersection of <strong>digital health</strong>, <strong>human–AI interaction</strong>, and <strong>engagement phenotyping</strong>. My research examines how AI-enabled and data-driven technologies are reshaping care delivery, patient–provider communication, and clinicians' well-being alongside the broader social dynamics of healthcare shaped by <strong>workload</strong>, <strong>trust</strong>, <strong>commitment</strong>, and <strong>health equity</strong>.<br><br>
+      I am a health informatics researcher working at the intersection of <strong>digital health</strong>, <strong>human–AI interaction</strong>, and <strong>engagement phenotyping</strong>. My research examines how AI-enabled and data-driven technologies are reshaping care delivery, patient–provider communication, and clinicians' well-being alongside the broader social dynamics of healthcare shaped by <strong>workload</strong>, <strong>trust</strong>, <strong>commitment</strong>, and <strong>health equity</strong>.<br><br>
 
       My recent projects focus on:
-      <ul style="margin-top: 10px; margin-bottom: 0; margin-left: 30px;">
+      <ul style="margin-top: 5px; margin-bottom: 0; margin-left: 30px;">
         <li><strong>User engagement with digital interventions for chronic disease management:</strong> investigating what engagement means for patients, causal effects of engagement on health outcomes, and how behavioral phenotyping can enable adaptive, personalized, and equitable intervention design.</li>
         <li><strong>Impacts of generative AI–supported care delivery on patient advice seeking:</strong> evaluating how AI-mediated messaging and remote triage influence clinical workload and patients' perceptions of care quality, clinician competence, and trust.</li>
       </ul><br>
