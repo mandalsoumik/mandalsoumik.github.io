@@ -99,10 +99,7 @@
                 Research Scientist
             </p>
             <div class="social-icons" style="display: flex; flex-direction: row; gap: 24px; justify-content: center; margin-top: 24px;">
-                <a href="mailto:soumik.mandal@nyulangone.org" target="_blank" rel="noopener noreferrer me" title="Email" 
-                   aria-label="Email" style="color: var(--primary); text-decoration: none;">
-                    <svg style="width: 26px; height: 26px; display: block;">
-                        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+                <a href="mailto:soumik.mandal@nyulangone.org" target="_blank" rel="noopener noreferrer me" title="Email" aria-label="Email"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -126,12 +123,8 @@
 </body>
 </html>
 
-                    </svg>
                 </a>
-                <a href="https://scholar.google.com/citations?user=lnGiUk8AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer me" title="Google Scholar" 
-                   aria-label="Google Scholar" style="color: var(--primary); text-decoration: none;">
-                    <svg style="width: 26px; height: 26px; display: block;">
-                        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+                <a href="https://scholar.google.com/citations?user=lnGiUk8AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer me" title="Google Scholar" aria-label="Google Scholar"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -154,12 +147,8 @@
 </body>
 </html>
 
-                    </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/soumik-mandal/" target="_blank" rel="noopener noreferrer me" title="LinkedIn" 
-                   aria-label="LinkedIn" style="color: var(--primary); text-decoration: none;">
-                    <svg style="width: 26px; height: 26px; display: block;">
-                        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+                <a href="https://www.linkedin.com/in/soumik-mandal/" target="_blank" rel="noopener noreferrer me" title="LinkedIn" aria-label="LinkedIn"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -184,7 +173,6 @@
 </body>
 </html>
 
-                    </svg>
                 </a>
             </div>
         </div>
@@ -237,14 +225,14 @@ My current work is supported by the NIH and the AHRQ.
         border-color: var(--primary);
     }
     
-    .social-icons a:hover {
-        color: var(--tertiary);
+    .social-icons a {
+        display: inline-block;
+        line-height: 1;
     }
     
     .social-icons svg {
-        fill: none;
-        stroke: currentColor;
-        stroke-width: 2;
+        height: 26px;
+        width: 26px;
     }
     
     @media (max-width: 768px) {
@@ -257,10 +245,6 @@ My current work is supported by the NIH and the AHRQ.
         
         article.home-info img {
             max-width: 150px !important;
-        }
-        
-        .social-icons {
-            flex-direction: row !important;
         }
         
         .buttons {
