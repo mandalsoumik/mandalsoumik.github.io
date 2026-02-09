@@ -17,18 +17,7 @@
                 Research Scientist
             </p>
             
-            {{- with site.Params.socialIcons }}
-            <div class="social-icons" style="display: flex; flex-direction: row; gap: 24px; justify-content: center; margin-top: 24px;">
-                {{- range . }}
-                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer me" title="{{ .name }}" 
-                   aria-label="{{ .name }}" style="color: var(--primary); text-decoration: none;">
-                    <svg style="width: 26px; height: 26px; display: block;">
-                        {{ partial "svg.html" . | safeHTML }}
-                    </svg>
-                </a>
-                {{- end }}
-            </div>
-            {{- end }}
+            {{- partial "social_icons.html" site.Params.socialIcons }}
         </div>
 
         <!-- Right Column: About Me Content -->
@@ -68,14 +57,9 @@
         border-color: var(--primary);
     }
     
-    .social-icons a:hover {
-        color: var(--tertiary);
-    }
-    
-    .social-icons svg {
-        fill: none;
-        stroke: currentColor;
-        stroke-width: 2;
+    .social-icons {
+        justify-content: center !important;
+        margin-top: 24px;
     }
     
     @media (max-width: 768px) {
@@ -88,10 +72,6 @@
         
         article.home-info img {
             max-width: 150px !important;
-        }
-        
-        .social-icons {
-            flex-direction: row !important;
         }
         
         .buttons {
