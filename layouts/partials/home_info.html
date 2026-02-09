@@ -20,11 +20,29 @@
             {{- with site.Params.socialIcons }}
             <div class="social-icons" style="display: flex; flex-direction: row; gap: 24px; justify-content: center; margin-top: 24px;">
                 {{- range . }}
-                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer me"
-                    title="{{ .name }}" style="color: var(--primary); text-decoration: none;">
-                    <span style="width: 26px; height: 26px; display: block;">
-                        {{- partial "svg.html" . }}
-                    </span>
+                {{- $icon_name := ( trim .name " " | lower ) }}
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer me" title="{{ .name }}" 
+                   style="color: var(--primary); text-decoration: none; width: 26px; height: 26px; display: block;">
+                    {{- if (eq $icon_name "email") -}}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    {{- else if (eq $icon_name "google scholar") -}}
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="16" r="6"></circle>
+                        <path d="M12 10V14"></path>
+                        <path d="M12 18h.01"></path>
+                        <path d="M6 8l6-4 6 4"></path>
+                        <path d="M12 4v6"></path>
+                    </svg>
+                    {{- else if (eq $icon_name "linkedin") -}}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    {{- end -}}
                 </a>
                 {{- end }}
             </div>
