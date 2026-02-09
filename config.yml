@@ -64,8 +64,8 @@ params:
         imageWidth: 160
         imageHeight: 160
         buttons:
-	    - name: CV
-              url: cv_Feb2026-SM.pdf
+  - name: CV
+    url: cv_Feb2026-SM.pdf
             - name: Papers
               url: papers/
             - name: Teaching
