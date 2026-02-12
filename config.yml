@@ -90,6 +90,9 @@ params:
 
   assets:
     disableScrollBarStyle: true
+    favicon: "favicon.svg"
+    favicon16x16: "favicon.svg"
+    favicon32x32: "favicon.svg"
 
   cover:
     hiddenInList: false
@@ -111,9 +114,3 @@ markup:
     endLevel: 2
     ordered: false
     startLevel: 2
-
-params:
-  assets:
-    favicon: "/favicon.svg"
-    favicon16x16: "/favicon.svg"
-    favicon32x32: "/favicon.svg"
