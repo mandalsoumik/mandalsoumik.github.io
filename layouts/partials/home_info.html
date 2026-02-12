@@ -9,15 +9,15 @@
                 style="width: 100%; max-width: 240px; border-radius: 8px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" />
             {{- end }}
             
-            <h1 style="font-size: 30px; margin: 0 0 8px 0; font-weight: 600;">
+            <h1 style="font-size: 30px; margin: 0 0 12px 0; font-weight: 600;">
                 {{ .title | default site.Title }}
             </h1>
             
-            <p style="font-size: 15px; color: var(--secondary); margin-bottom: 4px;">
-                Research Scientist
+            <p style="font-size: 16px; color: #57068c; margin-bottom: 6px; font-weight: 500;">
+                Research Scientist, Population Health
             </p>
             
-            <p style="font-size: 14px; color: var(--secondary); margin-bottom: 24px;">
+            <p style="font-size: 15px; color: #57068c; margin-bottom: 24px; line-height: 1.5;">
                 New York University Grossman School of Medicine
             </p>
             
@@ -59,9 +59,19 @@
 </article>
 
 <style>
+    :root {
+        --theme: #fafafa;
+        --entry: #ffffff;
+    }
+    
+    body {
+        background-color: #fafafa;
+    }
+    
     .main {
         max-width: none !important;
         width: 100% !important;
+        background-color: #fafafa;
     }
     
     .button:hover {
