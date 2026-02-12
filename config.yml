@@ -97,7 +97,7 @@ params:
 
   label:
     text: "Soumik Mandal"
-    icon: favicon.ico
+    icon: favicon.svg
     iconHeight: 18
 
 markup:
@@ -111,3 +111,9 @@ markup:
     endLevel: 2
     ordered: false
     startLevel: 2
+
+params:
+  assets:
+    favicon: "/favicon.svg"
+    favicon16x16: "/favicon.svg"
+    favicon32x32: "/favicon.svg"
