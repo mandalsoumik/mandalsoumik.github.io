@@ -1,6 +1,6 @@
 {{- with site.Params.profileMode }}
 <article class="first-entry home-info" style="max-width: none !important;">
-    <div style="display: grid; grid-template-columns: 300px 1fr; gap: 80px; max-width: 1500px; width: 80%; margin: 0 auto; padding: 40px 0;">
+    <div style="display: grid; grid-template-columns: 300px 1fr; gap: 70px; max-width: 1500px; width: 80%; margin: 0 auto; padding: 40px 0;">
         
         <!-- Left Column: Photo and Name -->
         <div style="text-align: center;">
@@ -9,11 +9,11 @@
                 style="width: 100%; max-width: 240px; border-radius: 8px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" />
             {{- end }}
             
-            <h1 style="font-size: 28px; margin: 0 0 12px 0; font-weight: 600;">
+            <h1 style="font-size: 30px; margin: 0 0 12px 0; font-weight: 600;">
                 {{ .title | default site.Title }}
             </h1>
             
-            <p style="font-size: 18px; color: margin-bottom: 12px; font-weight: 500; font-style: italic;">
+            <p style="font-size: 18px; margin-bottom: 12px; font-weight: 500; font-style: italic;">
                 Research Scientist
             </p>
             
@@ -34,21 +34,21 @@
 
         <!-- Right Column: About Me Content -->
         <div>
-            <h2 style="font-size: 28px; margin: 0 0 30px 0; font-weight: 600;">
+            <h2 style="font-size: 28px; margin: 0 0 20px 0; font-weight: 600;">
                 About
             </h2>
             
             {{- if .subtitle }}
-            <div class="entry-content" style="font-size: 17px; line-height: 1.7; color: var(--content); margin-bottom: 32px;">
+            <div class="entry-content" style="font-size: 17px; line-height: 1.65; color: var(--content); margin-bottom: 24px;">
                 {{ .subtitle | markdownify }}
             </div>
             {{- end }}
             
             {{- if .buttons }}
-            <div class="buttons" style="display: flex; flex-direction: row; gap: 14px; flex-wrap: wrap;">
+            <div class="buttons" style="display: flex; flex-direction: row; gap: 14px; flex-wrap: wrap; margin-top: 24px;">
                 {{- range .buttons }}
                 <a class="button" href="{{ .url }}" rel="noopener" title="{{ .name }}"
-                    style="padding: 11px 28px; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--primary); font-weight: 500; transition: all 0.2s; text-align: center; font-size: 15px;">
+                    style="padding: 10px 24px; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--primary); font-weight: 500; transition: all 0.2s; text-align: center; font-size: 15px;">
                     {{ .name }}
                 </a>
                 {{- end }}
