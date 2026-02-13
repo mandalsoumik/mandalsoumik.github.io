@@ -59,7 +59,7 @@ params:
       I am an interdisciplinary <strong>Health Informatics</strong> researcher studying human interaction with AI and data-driven systems in healthcare. My work spans <strong>digital health</strong>, <strong>human–computer interaction</strong>, and <strong>personalized behavioral interventions</strong> for managing chronic conditions. I investigate how health technologies are reshaping care delivery, clinicians' workload, and patient outcomes alongside their broader social impacts on <strong>trust</strong>, <strong>commitment</strong>, and <strong>health equity</strong>.<br>
 
       My recent projects focus on:
-      <ul style="margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 30px;">
+      <ul style="margin-top: 0.3em; margin-bottom: 0.5em; margin-left: 30px;">
         <li><strong>User engagement with digital interventions for chronic disease management:</strong> investigating what engagement means for patients, causal effects of engagement on health outcomes, and how behavioral phenotyping can enable adaptive, personalized, and equitable intervention design.</li>
         <li><strong>Impacts of generative AI–supported care delivery on patient advice seeking:</strong> evaluating how AI-mediated messaging and remote triage influence clinical workload and patients' perceptions of care quality, clinician competence, and trust.</li>
       </ul>
