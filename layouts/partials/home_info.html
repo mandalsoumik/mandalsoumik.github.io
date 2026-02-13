@@ -22,21 +22,10 @@
             </p>
             
             {{- with site.Params.socialIcons }}
-            <div class="social-icons" style="display: flex; flex-direction: row; gap: 24px; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
+            <div class="social-icons" style="display: flex; flex-direction: row; gap: 24px; justify-content: center; margin-top: 20px;">
                 {{- range $index, $value := . }}
                 <a href="{{ .url }}" target="_blank" rel="noopener noreferrer me" title="{{ .name }}" aria-label="{{ .name }}">
                     {{- partial "svg.html" . }}
-                </a>
-                {{- end }}
-            </div>
-            {{- end }}
-            
-            {{- if .buttons }}
-            <div class="buttons" style="display: flex; flex-direction: column; gap: 10px; margin-top: 0;">
-                {{- range .buttons }}
-                <a class="button" href="{{ .url }}" rel="noopener" title="{{ .name }}"
-                    style="padding: 10px 24px; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--primary); font-weight: 500; transition: all 0.2s; text-align: center; font-size: 15px;">
-                    {{ .name }}
                 </a>
                 {{- end }}
             </div>
