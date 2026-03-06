@@ -86,6 +86,8 @@ params:
       url: https://scholar.google.com/citations?user=lnGiUk8AAAAJ&hl=en&oi=ao
     - name: LinkedIn
       url: https://www.linkedin.com/in/soumik-mandal/
+    - name: Location
+          url: /location/
 
   assets:
     disableScrollBarStyle: true
