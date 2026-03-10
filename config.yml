@@ -88,6 +88,8 @@ params:
       url: https://www.linkedin.com/in/soumik-mandal/
     - name: Location
       url: https://www.google.com/maps/place/NYU+Grossman+School+of+Medicine
+    - name: Calendar
+      url: https://calendly.com/soumik-mandal
 
   assets:
     disableScrollBarStyle: true
